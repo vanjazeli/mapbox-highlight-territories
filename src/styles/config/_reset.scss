@@ -110,6 +110,10 @@ input {
 	font-family: $default-font;
 }
 
+body {
+	overflow: hidden;
+}
+
 html {
 	scroll-behavior: smooth;
 	scroll-padding-top: 82px;
