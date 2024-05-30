@@ -66,8 +66,13 @@ map.on('load', () => {
 			map.setPaintProperty(`${name}-layer`, 'fill-opacity', 0.5);
 		});
 
-		map.on('click', `${name}-layer`, () => {
-			alert(`This function is going to open the popup for the ${name}-layer popup.`);
+		map.on('click', `${name}-layer`, (e) => {
+			const coordinates = e.lngLat;
+			map.flyTo({
+				center: coordinates,
+				zoom: 5,
+				speed: 1.2,
+			});
 		});
 	});
 });
